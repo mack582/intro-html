@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fast by Default</title>
+<meta name="description" content="A hand-written static site that loads in one request: no frameworks, no fonts, no trackers.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<meta property="og:title" content="Fast by Default">
+<meta property="og:description" content="A hand-written static site that loads in one request: no frameworks, no fonts, no trackers.">
+<meta property="og:type" content="website">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  --bg:#fbfbfa; --panel:#fff; --ink:#16181d; --muted:#5b6270; --line:#e3e4e8;
+  --accent:#c2410c; --accent-soft:#fff1e9;
+  --shadow:0 1px 2px rgba(16,18,25,.05),0 8px 24px -12px rgba(16,18,25,.18);
+  --radius:14px;
+  --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0f1115; --panel:#161920; --ink:#e9eaee; --muted:#a0a7b5; --line:#262b35;
+    --accent:#ff9a62; --accent-soft:#231a15;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -14px rgba(0,0,0,.7);
+  }
+}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans);
+  font-size:17px; line-height:1.65; text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{width:min(72rem,100% - 2.5rem); margin-inline:auto}
+a{color:var(--accent); text-underline-offset:3px; text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:4px}
+
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:1rem;top:1rem;position:fixed;z-index:9;background:var(--panel);padding:.6rem 1rem;border-radius:8px;box-shadow:var(--shadow)}
+
+header{border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.1rem 0}
+.brand{display:flex;align-items:center;gap:.55rem;font-weight:650;letter-spacing:-.01em;color:var(--ink);text-decoration:none}
+.brand .mark{
+  width:1.9rem;height:1.9rem;display:grid;place-items:center;border-radius:8px;
+  background:var(--accent-soft);color:var(--accent);font-size:1rem;
+}
+nav ul{display:flex;gap:1.4rem;list-style:none;margin:0;padding:0;font-size:.94rem}
+nav a{color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--ink)}
+
+.hero{padding:clamp(3rem,9vw,6rem) 0 clamp(2.5rem,6vw,4rem)}
+.eyebrow{
+  display:inline-block;font-family:var(--mono);font-size:.76rem;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--accent);background:var(--accent-soft);
+  padding:.3rem .6rem;border-radius:999px;margin:0 0 1.1rem
+}
+h1{
+  font-size:clamp(2.3rem,6.2vw,4.1rem); line-height:1.05; letter-spacing:-.035em;
+  margin:0 0 1.1rem; font-weight:680; max-width:16ch;
+}
+.lede{font-size:clamp(1.05rem,2.2vw,1.28rem);color:var(--muted);margin:0;max-width:56ch}
+.cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+.btn{
+  display:inline-block;padding:.7rem 1.25rem;border-radius:10px;font-size:.96rem;
+  font-weight:560;text-decoration:none;border:1px solid transparent;transition:transform .12s ease
+}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:var(--panel)}
+
+.stats{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;margin:0 0 clamp(3rem,7vw,4.5rem)
+}
+.stat{background:var(--panel);padding:1.25rem 1.4rem}
+.stat b{display:block;font-size:1.85rem;letter-spacing:-.03em;font-weight:650;font-variant-numeric:tabular-nums}
+.stat span{font-size:.85rem;color:var(--muted)}
+
+section{padding-bottom:clamp(3rem,7vw,4.5rem)}
+h2{font-size:clamp(1.5rem,3.4vw,2rem);letter-spacing:-.025em;margin:0 0 .5rem;font-weight:640}
+.sub{color:var(--muted);margin:0 0 2rem;max-width:60ch}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1.1rem}
+.card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:1.4rem 1.5rem;box-shadow:var(--shadow)
+}
+.card h3{margin:.15rem 0 .45rem;font-size:1.06rem;font-weight:620;letter-spacing:-.015em}
+.card p{margin:0;color:var(--muted);font-size:.94rem}
+.card .ico{font-size:1.3rem;line-height:1}
+
+pre{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:1.1rem 1.25rem;overflow-x:auto;font-family:var(--mono);font-size:.86rem;
+  line-height:1.6;box-shadow:var(--shadow);margin:0
+}
+pre .c{color:var(--muted)}
+
+.checklist{list-style:none;margin:0;padding:0;display:grid;gap:.7rem;max-width:62ch}
+.checklist li{position:relative;padding-left:1.75rem;color:var(--muted);font-size:.96rem}
+.checklist li::before{
+  content:"✓";position:absolute;left:0;top:-.05rem;color:var(--accent);font-weight:700
+}
+.checklist b{color:var(--ink);font-weight:600}
+
+.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(19rem,1fr));gap:2rem;align-items:start}
+
+footer{border-top:1px solid var(--line);padding:2rem 0 3rem;color:var(--muted);font-size:.88rem}
+footer p{margin:0 0 .35rem}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="/"><span class="mark">⚡</span> Fast by Default</a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#how">How</a></li>
+        <li><a href="#budget">Budget</a></li>
+        <li><a href="#ship">Ship it</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+
+    <div class="hero">
+      <p class="eyebrow">One request · No JavaScript</p>
+      <h1>A website that&nbsp;renders before you blink.</h1>
+      <p class="lede">
+        This whole page is a single HTML file with its CSS inlined. No framework, no bundler,
+        no web fonts, no analytics, no cookie banner. The browser gets one file and it is done.
+      </p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#how">See how it works</a>
+        <a class="btn btn-ghost" href="#ship">Deploy in 2 minutes</a>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>1</b><span>HTTP request</span></div>
+      <div class="stat"><b>0</b><span>JS bytes</span></div>
+      <div class="stat"><b>0</b><span>Third parties</span></div>
+      <div class="stat"><b>4&nbsp;KB</b><span>Gzipped</span></div>
+    </div>
+
+    <section id="how">
+      <h2>Why it's fast</h2>
+      <p class="sub">
+        Speed here isn't an optimization pass bolted on at the end. It's what's left when you
+        don't add the slow things in the first place.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <div class="ico">📄</div>
+          <h3>Inlined critical CSS</h3>
+          <p>Styles live in a <code>&lt;style&gt;</code> block in the head. No render-blocking stylesheet round trip, so first paint happens on the first packet.</p>
+        </div>
+        <div class="card">
+          <div class="ico">🔤</div>
+          <h3>System font stack</h3>
+          <p>Uses the font already on the device. Nothing to download, no flash of invisible text, no layout shift when a webfont swaps in.</p>
+        </div>
+        <div class="card">
+          <div class="ico">🚫</div>
+          <h3>No JavaScript</h3>
+          <p>Nothing to parse, compile, or hydrate. The page is interactive the moment it paints, and it works with JS disabled.</p>
+        </div>
+        <div class="card">
+          <div class="ico">📐</div>
+          <h3>Zero layout shift</h3>
+          <p>Fluid type with <code>clamp()</code> and intrinsic grids mean the layout settles once. CLS stays at 0 without reserving hacks.</p>
+        </div>
+        <div class="card">
+          <div class="ico">🔒</div>
+          <h3>No third parties</h3>
+          <p>No CDN scripts, no tag managers, no trackers. Every byte comes from one origin, so there are no extra DNS lookups or TLS handshakes.</p>
+        </div>
+        <div class="card">
+          <div class="ico">🌗</div>
+          <h3>Dark mode for free</h3>
+          <p>A handful of CSS custom properties swapped under <code>prefers-color-scheme</code>. No toggle script, no flash of the wrong theme.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="budget">
+      <div class="split">
+        <div>
+          <h2>The performance budget</h2>
+          <p class="sub">Rules that keep the page fast as it grows. Break one and you own the fix.</p>
+          <ul class="checklist">
+            <li><b>One request for first paint.</b> HTML carries its own styles.</li>
+            <li><b>No blocking resources.</b> Anything optional loads lazily or not at all.</li>
+            <li><b>Images ship modern and sized.</b> WebP/AVIF, explicit width and height, <code>loading="lazy"</code> below the fold.</li>
+            <li><b>Under 14&nbsp;KB compressed</b> for the initial document — roughly one TCP round trip.</li>
+            <li><b>No dependency without a measurement</b> showing what it costs.</li>
+          </ul>
+        </div>
+        <div>
+<pre><span class="c">&lt;!-- The whole delivery model --&gt;</span>
+&lt;style&gt; <span class="c">/* critical CSS, inlined */</span> &lt;/style&gt;
+
+<span class="c">&lt;!-- Images: modern format, no reflow --&gt;</span>
+&lt;img src="hero.avif"
+     width="1200" height="675"
+     loading="lazy" decoding="async"
+     alt="Descriptive text"&gt;
+
+<span class="c">&lt;!-- Fonts: already installed --&gt;</span>
+font-family: system-ui, sans-serif;
+
+<span class="c">&lt;!-- JavaScript --&gt;</span>
+<span class="c">// (intentionally left blank)</span></pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="ship">
+      <h2>Ship it</h2>
+      <p class="sub">
+        Static files need no build step and no server. Push the branch, turn on GitHub Pages,
+        and a global CDN serves it.
+      </p>
+      <div class="split">
+        <div>
+<pre>git add index.html 404.html
+git commit -m "Add site"
+git push -u origin main
+
+<span class="c"># Settings → Pages → Deploy from branch</span>
+<span class="c"># → main / (root) → Save</span></pre>
+        </div>
+        <div>
+          <ul class="checklist">
+            <li><b>Edit</b> <code>index.html</code> — it's the only file that matters.</li>
+            <li><b>Preview locally</b> with <code>python3 -m http.server</code>, or just open the file.</li>
+            <li><b>Measure</b> in DevTools → Lighthouse before adding anything new.</li>
+            <li><b>Keep the budget</b> and the site stays this quick a year from now.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Hand-written HTML and CSS. No build step, no dependencies, no tracking.</p>
+    <p>MIT licensed. Built in the <a href="https://github.com/mack582/intro-html">intro-html</a> repository.</p>
+  </div>
+</footer>
+</body>
+</html>
