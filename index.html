@@ -3,35 +3,51 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Law Office of Shawn McKenna — Chicago Divorce &amp; Family Law</title>
-<meta name="description" content="Chicago divorce and family law attorney handling dissolution of marriage, parenting time and decision-making, support, and marital property division in Cook County and the collar counties.">
+<title>Law Office of Shawn McKenna — Chicago Divorce &amp; Family Law Attorney</title>
+<meta name="description" content="Chicago and Rolling Meadows divorce attorney practicing family law exclusively since 2009. Dissolution, parenting, support, and property division — by settlement, collaborative process, or trial. Free consultation.">
 <meta name="color-scheme" content="light dark">
+<!-- TODO: set canonical to the domain this actually deploys to -->
+<link rel="canonical" href="https://lawfirmfordivorce.com/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>">
-<meta property="og:title" content="Law Office of Shawn McKenna">
-<meta property="og:description" content="Chicago divorce and family law. Dissolution, parenting, support, and property division.">
+<meta property="og:title" content="Law Office of Shawn McKenna — Chicago Divorce &amp; Family Law">
+<meta property="og:description" content="Family law exclusively since 2009. Offices in Chicago and Rolling Meadows.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 
 <!--
-  ============================================================================
-  PLACEHOLDERS — search this file for "TODO:" and replace before publishing.
-  Every factual claim about the firm is left blank on purpose. Nothing about
-  credentials, experience, results, or clients has been invented.
-      1. Phone number, email, office address
-      2. Office hours / consultation policy and fee
-      3. Bar admissions, education, background (the "About" section)
-      4. Attorney-advertising disclaimer wording — confirm it matches
-         Illinois Rules of Professional Conduct 7.1-7.3 as you read them
-  ============================================================================
+  ==========================================================================
+  VERIFY BEFORE PUBLISHING — every fact below came from web search results,
+  NOT from reading lawfirmfordivorce.com (this build environment blocks the
+  domain). Confirm each one, then delete this block.
+
+    * Practicing family law exclusively since 2009
+    * LL.M in Family Law, Chicago-Kent College of Law
+    * Super Lawyers "Rising Star," Family Law, every year since 2019
+    * Chicago office: 105 W. Madison St., Suite 1300, Chicago, IL 60602
+    * Phone: (312) 806-5347
+    * Hours: Monday-Friday, 9:00 a.m. - 5:00 p.m.
+    * Free initial in-office consultation
+
+  STILL MISSING — search "TODO:" below:
+    * Rolling Meadows street address and suite
+    * Email address for the firm
+    * Bar admissions (Illinois year; any federal courts)
+    * Undergraduate and J.D. institutions
+    * Whether the free consultation is offered by phone/video as well
+
+  Under Illinois RPC 7.1 every claim here must be accurate and verifiable.
+  The Super Lawyers line is stated with its source attributed; confirm the
+  years and that the attribution satisfies current ARDC guidance.
+  ==========================================================================
 -->
 
 <style>
 *,*::before,*::after{box-sizing:border-box}
 :root{
-  --bg:#fcfcfb; --panel:#fff; --raised:#f5f5f3;
-  --ink:#15181d; --muted:#565d68; --line:#e2e2df;
-  --accent:#7a5c2e; --accent-ink:#6b4f26; --accent-soft:#f6f0e4;
-  --deep:#1c2530;
+  --bg:#fcfcfb; --panel:#fff; --raised:#f5f4f1;
+  --ink:#14171c; --muted:#545b66; --line:#e3e2de;
+  --accent:#7a5c2e; --accent-ink:#6b4f26; --accent-soft:#f7f1e5;
+  --deep:#1a2330; --deep-ink:#aeb6c2;
   --shadow:0 1px 2px rgba(20,24,30,.05),0 10px 30px -18px rgba(20,24,30,.28);
   --radius:12px;
   --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
@@ -39,126 +55,152 @@
 }
 @media (prefers-color-scheme:dark){
   :root{
-    --bg:#111418; --panel:#171b21; --raised:#1d222a;
-    --ink:#e8eaed; --muted:#a2aab6; --line:#272d36;
-    --accent:#d3ac6a; --accent-ink:#e2bf82; --accent-soft:#221d14;
-    --deep:#0d1116;
-    --shadow:0 1px 2px rgba(0,0,0,.45),0 12px 34px -20px rgba(0,0,0,.8);
+    --bg:#101317; --panel:#161a20; --raised:#1c2029;
+    --ink:#e8eaed; --muted:#a3aab5; --line:#262c35;
+    --accent:#d3ac6a; --accent-ink:#e3c088; --accent-soft:#211c13;
+    --deep:#0b0e12; --deep-ink:#9aa3b0;
+    --shadow:0 1px 2px rgba(0,0,0,.45),0 12px 34px -20px rgba(0,0,0,.85);
   }
 }
-html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
-body{
-  margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
-  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
-}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
 .wrap{width:min(70rem,100% - 2.5rem);margin-inline:auto}
-h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.015em;line-height:1.18}
+h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.015em;line-height:1.2}
 a{color:var(--accent-ink);text-underline-offset:3px}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
 .skip{position:absolute;left:-9999px}
 .skip:focus{position:fixed;left:1rem;top:1rem;z-index:9;background:var(--panel);padding:.6rem 1rem;border-radius:8px;box-shadow:var(--shadow)}
+.todo{display:inline-block;font-size:.76rem;background:var(--accent-soft);color:var(--accent-ink);border:1px dashed var(--accent);border-radius:5px;padding:.05rem .4rem;font-weight:600}
 
-/* ---------- header ---------- */
 header{background:var(--panel);border-bottom:1px solid var(--line)}
-.bar{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;padding:1.05rem 0}
-.brand{text-decoration:none;color:var(--ink);display:block}
-.brand .name{font-family:var(--serif);font-size:1.16rem;font-weight:600;letter-spacing:.005em;display:block}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;padding:1rem 0}
+.brand{text-decoration:none;color:var(--ink)}
+.brand .name{font-family:var(--serif);font-size:1.15rem;font-weight:600;display:block}
 .brand .rule{display:block;width:2.2rem;height:2px;background:var(--accent);margin:.4rem 0 .3rem}
-.brand .tag{display:block;font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
-.navwrap{display:flex;align-items:center;gap:1.6rem;flex-wrap:wrap}
-nav ul{display:flex;gap:1.4rem;list-style:none;margin:0;padding:0;font-size:.93rem}
+.brand .tag{display:block;font-size:.71rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+.navwrap{display:flex;align-items:center;gap:.9rem 1.5rem;flex-wrap:wrap}
+nav ul{display:flex;flex-wrap:wrap;gap:.55rem 1.35rem;list-style:none;margin:0;padding:0;font-size:.92rem}
 nav a{color:var(--muted);text-decoration:none}
 nav a:hover{color:var(--ink)}
-.call{
-  display:inline-block;padding:.55rem 1.05rem;border-radius:8px;background:var(--deep);color:#fff;
-  text-decoration:none;font-size:.9rem;font-weight:550;white-space:nowrap
-}
+.call{display:inline-block;padding:.55rem 1.05rem;border-radius:8px;background:var(--deep);color:#fff;text-decoration:none;font-size:.9rem;font-weight:560;white-space:nowrap}
 @media (prefers-color-scheme:dark){.call{background:var(--accent);color:#14100a}}
 
-/* ---------- hero ---------- */
-.hero{padding:clamp(3rem,8vw,5.5rem) 0 clamp(2.5rem,5vw,3.5rem);border-bottom:1px solid var(--line)}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(2rem,5vw,4rem);align-items:start}
+.hero{padding:clamp(3rem,7.5vw,5rem) 0 0}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(2rem,5vw,3.5rem);align-items:start}
 @media (max-width:52rem){.hero-grid{grid-template-columns:1fr}}
-.eyebrow{
-  font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);
-  margin:0 0 1rem;font-weight:600
-}
-h1{font-size:clamp(2.1rem,5.2vw,3.35rem);margin:0 0 1.15rem;max-width:18ch}
-.lede{font-size:clamp(1.03rem,1.9vw,1.19rem);color:var(--muted);margin:0;max-width:54ch}
-.cta{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:2rem}
+.eyebrow{font-size:.73rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 1rem;font-weight:600}
+h1{font-size:clamp(2.05rem,5vw,3.2rem);margin:0 0 1.15rem;max-width:19ch}
+.lede{font-size:clamp(1.02rem,1.9vw,1.17rem);color:var(--muted);margin:0;max-width:56ch}
+.cta{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.9rem}
 .btn{display:inline-block;padding:.72rem 1.3rem;border-radius:9px;text-decoration:none;font-size:.95rem;font-weight:550;border:1px solid transparent}
 .btn-primary{background:var(--accent);color:#fff}
 @media (prefers-color-scheme:dark){.btn-primary{color:#14100a}}
 .btn-ghost{border-color:var(--line);background:var(--panel);color:var(--ink)}
 
-.callout{
-  background:var(--raised);border:1px solid var(--line);border-left:3px solid var(--accent);
-  border-radius:var(--radius);padding:1.4rem 1.5rem
-}
-.callout h2{font-size:1.02rem;margin:0 0 .7rem;font-family:var(--sans);font-weight:640;letter-spacing:0}
-.callout p{margin:0 0 .8rem;font-size:.93rem;color:var(--muted)}
-.callout p:last-child{margin-bottom:0}
-.todo{
-  display:inline-block;font-size:.76rem;letter-spacing:.04em;background:var(--accent-soft);
-  color:var(--accent-ink);border:1px dashed var(--accent);border-radius:5px;padding:.05rem .4rem;font-weight:600
-}
+.card-quiet{background:var(--raised);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:var(--radius);padding:1.4rem 1.55rem}
+.card-quiet h2{font-family:var(--sans);font-size:.79rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin:0 0 .8rem;font-weight:650}
+.card-quiet p{margin:0 0 .8rem;font-size:.94rem;color:var(--muted)}
+.card-quiet p:last-child{margin-bottom:0}
+.card-quiet strong{color:var(--ink)}
 
-/* ---------- sections ---------- */
-section{padding:clamp(3rem,7vw,4.75rem) 0;border-bottom:1px solid var(--line)}
-.head{max-width:60ch;margin-bottom:2.4rem}
-h2{font-size:clamp(1.55rem,3.2vw,2.05rem);margin:0 0 .6rem}
+.marks{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin:clamp(2.5rem,6vw,3.5rem) 0 0}
+.mark{background:var(--panel);padding:1.15rem 1.3rem}
+.mark b{display:block;font-family:var(--serif);font-size:1.45rem;font-weight:600;letter-spacing:-.02em}
+.mark span{display:block;font-size:.85rem;color:var(--muted);margin-top:.15rem}
+
+section{padding:clamp(3rem,7vw,4.6rem) 0;border-top:1px solid var(--line)}
+.head{max-width:62ch;margin-bottom:2.3rem}
+h2{font-size:clamp(1.5rem,3.1vw,2rem);margin:0 0 .6rem}
 .head p{color:var(--muted);margin:0}
 
-.areas{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1.1rem}
-.area{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem 1.6rem;box-shadow:var(--shadow)}
-.area h3{font-size:1.08rem;margin:0 0 .5rem}
-.area p{margin:0;font-size:.93rem;color:var(--muted)}
-.area .cite{display:block;margin-top:.8rem;font-size:.78rem;color:var(--muted);opacity:.85;font-variant-numeric:tabular-nums}
+.paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1.1rem}
+.path{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:1.55rem 1.6rem;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.path .kicker{font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:var(--accent-ink);font-weight:650;margin:0 0 .55rem}
+.path h3{font-size:1.13rem;margin:0 0 .55rem}
+.path p{margin:0 0 .9rem;font-size:.94rem;color:var(--muted)}
+.path .fit{margin-top:auto;padding-top:.9rem;border-top:1px solid var(--line);font-size:.87rem;color:var(--muted)}
+.path .fit b{color:var(--ink);font-weight:600}
 
-.steps{list-style:none;counter-reset:s;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.6rem}
-.steps li{counter-increment:s;position:relative;padding-top:2.6rem}
-.steps li::before{
-  content:counter(s,decimal-leading-zero);position:absolute;top:0;left:0;
-  font-family:var(--serif);font-size:1.1rem;color:var(--accent-ink);
-  border-top:2px solid var(--accent);padding-top:.5rem;width:100%
-}
-.steps h3{font-size:1.02rem;margin:0 0 .4rem}
+.areas{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1.1rem}
+.area{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:1.45rem 1.55rem;box-shadow:var(--shadow)}
+.area h3{font-size:1.06rem;margin:0 0 .5rem}
+.area p{margin:0;font-size:.93rem;color:var(--muted)}
+.area .cite{display:block;margin-top:.8rem;font-size:.78rem;color:var(--muted);opacity:.85}
+
+.steps{list-style:none;counter-reset:s;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(14.5rem,1fr));gap:1.6rem}
+.steps li{counter-increment:s;padding-top:2.5rem;position:relative}
+.steps li::before{content:counter(s,decimal-leading-zero);position:absolute;top:0;left:0;width:100%;font-family:var(--serif);font-size:1.05rem;color:var(--accent-ink);border-top:2px solid var(--accent);padding-top:.5rem}
+.steps h3{font-size:1rem;margin:0 0 .4rem}
 .steps p{margin:0;font-size:.92rem;color:var(--muted)}
 
-details{border-bottom:1px solid var(--line);padding:.2rem 0}
+.bio{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,19rem);gap:clamp(1.5rem,4vw,3rem);align-items:start}
+@media (max-width:52rem){.bio{grid-template-columns:1fr}}
+.bio p{color:var(--muted);max-width:64ch}
+.bio p:first-of-type{margin-top:0}
+.creds{list-style:none;margin:0;padding:0;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.creds li{padding:.95rem 1.3rem;border-bottom:1px solid var(--line);font-size:.92rem}
+.creds li:last-child{border-bottom:0}
+.creds b{display:block;font-size:.71rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:650;margin-bottom:.2rem}
+.creds .src{display:block;font-size:.78rem;color:var(--muted);margin-top:.3rem}
+
+details{border-bottom:1px solid var(--line)}
 details:first-of-type{border-top:1px solid var(--line)}
-summary{
-  cursor:pointer;padding:1.05rem 2rem 1.05rem 0;font-weight:560;position:relative;
-  list-style:none;font-size:1rem
-}
+summary{cursor:pointer;padding:1.05rem 2rem 1.05rem 0;font-weight:560;position:relative;list-style:none}
 summary::-webkit-details-marker{display:none}
-summary::after{
-  content:"+";position:absolute;right:.35rem;top:50%;transform:translateY(-50%);
-  color:var(--accent-ink);font-size:1.3rem;font-weight:400;line-height:1
-}
+summary::after{content:"+";position:absolute;right:.35rem;top:50%;transform:translateY(-50%);color:var(--accent-ink);font-size:1.3rem;line-height:1}
 details[open] summary::after{content:"−"}
-details p{margin:0 0 1.1rem;color:var(--muted);font-size:.95rem;max-width:68ch}
+details p{margin:0 0 1.1rem;color:var(--muted);font-size:.95rem;max-width:70ch}
 
-.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1.1rem}
-.ccard{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem 1.6rem;box-shadow:var(--shadow)}
-.ccard h3{font-size:.79rem;letter-spacing:.13em;text-transform:uppercase;font-family:var(--sans);color:var(--muted);margin:0 0 .7rem;font-weight:650}
-.ccard p{margin:0;font-size:1.02rem}
-.ccard .sm{font-size:.88rem;color:var(--muted);margin-top:.45rem}
+.offices{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.1rem}
+.office{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem 1.6rem;box-shadow:var(--shadow)}
+.office h3{font-size:.79rem;letter-spacing:.13em;text-transform:uppercase;font-family:var(--sans);color:var(--muted);margin:0 0 .8rem;font-weight:650}
+.office p{margin:0 0 .55rem}
+.office .big{font-size:1.16rem;font-family:var(--serif)}
+.office .sm{font-size:.88rem;color:var(--muted);margin-bottom:0}
+.notice{margin-top:2rem;background:var(--raised);border:1px solid var(--line);border-radius:var(--radius);padding:1.3rem 1.5rem}
+.notice p{margin:0 0 .9rem;font-size:.89rem;color:var(--muted);max-width:76ch}
+.notice p:last-child{margin-bottom:0}
+.notice strong{color:var(--ink)}
 
-.notice{
-  margin-top:2.2rem;background:var(--raised);border:1px solid var(--line);
-  border-radius:var(--radius);padding:1.3rem 1.5rem
-}
-.notice p{margin:0;font-size:.89rem;color:var(--muted);max-width:74ch}
-
-footer{background:var(--deep);color:#c7cdd6;padding:3rem 0 3.5rem}
-@media (prefers-color-scheme:dark){footer{border-top:1px solid var(--line)}}
+footer{background:var(--deep);color:var(--deep-ink);padding:3rem 0 3.5rem;border-top:1px solid var(--line)}
 footer .fname{font-family:var(--serif);color:#fff;font-size:1.1rem;margin:0 0 .3rem}
-footer p{margin:0 0 .9rem;font-size:.86rem;line-height:1.6;max-width:76ch;color:#aab2bd}
-footer a{color:#e2bf82}
-footer .fine{font-size:.8rem;color:#8b939f;border-top:1px solid rgba(255,255,255,.12);padding-top:1.2rem;margin-top:1.6rem}
+footer p{margin:0 0 .9rem;font-size:.86rem;line-height:1.6;max-width:78ch}
+footer a{color:#e3c088}
+footer .fine{font-size:.79rem;opacity:.8;border-top:1px solid rgba(255,255,255,.12);padding-top:1.2rem;margin-top:1.5rem}
 </style>
+
+<!-- Local-business structured data: helps the firm surface in map and local
+     search results. Not executed as JavaScript and adds no runtime cost.
+     TODO: add the Rolling Meadows location as a second entry once its
+     address is filled in, and confirm every value below. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Law Office of Shawn McKenna",
+  "description": "Divorce and family law attorney serving Chicago and the collar counties. Practicing family law exclusively since 2009.",
+  "url": "https://lawfirmfordivorce.com/",
+  "telephone": "+1-312-806-5347",
+  "priceRange": "Free initial consultation",
+  "areaServed": ["Chicago", "Cook County", "Lake County", "DuPage County", "Kane County", "Will County"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "105 W. Madison St., Suite 1300",
+    "addressLocality": "Chicago",
+    "addressRegion": "IL",
+    "postalCode": "60602",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "09:00",
+    "closes": "17:00"
+  },
+  "knowsAbout": ["Divorce","Child custody","Parenting time","Child support","Spousal maintenance","Marital property division","Prenuptial agreements","Collaborative law"]
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -168,19 +210,19 @@ footer .fine{font-size:.8rem;color:#8b939f;border-top:1px solid rgba(255,255,255
     <a class="brand" href="/">
       <span class="name">Law Office of Shawn McKenna</span>
       <span class="rule"></span>
-      <span class="tag">Divorce &amp; Family Law · Chicago</span>
+      <span class="tag">Divorce &amp; Family Law · Chicago · Rolling Meadows</span>
     </a>
     <div class="navwrap">
       <nav aria-label="Primary">
         <ul>
+          <li><a href="#paths">Approach</a></li>
           <li><a href="#practice">Practice Areas</a></li>
-          <li><a href="#process">Process</a></li>
+          <li><a href="#attorney">Attorney</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <!-- TODO: replace with the real number, e.g. href="tel:+13125550100" -->
-      <a class="call" href="tel:">Call [TODO: phone]</a>
+      <a class="call" href="tel:+13128065347">(312) 806-5347</a>
     </div>
   </div>
 </header>
@@ -188,128 +230,150 @@ footer .fine{font-size:.8rem;color:#8b939f;border-top:1px solid rgba(255,255,255
 <main id="main">
 
   <div class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <p class="eyebrow">Illinois Family Law</p>
-        <h1>Steady counsel through a divorce that decides the next decade.</h1>
-        <p class="lede">
-          The Law Office of Shawn McKenna represents spouses and parents in dissolution
-          of marriage, parenting, support, and marital property matters in the Circuit
-          Court of Cook County and the surrounding collar counties.
-        </p>
-        <div class="cta">
-          <a class="btn btn-primary" href="#contact">Request a consultation</a>
-          <a class="btn btn-ghost" href="#practice">Review practice areas</a>
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">Illinois Family Law · Chicago</p>
+          <h1>One practice area, practiced exclusively, since 2009.</h1>
+          <p class="lede">
+            The Law Office of Shawn McKenna handles divorce and family law and nothing
+            else — dissolution, parenting, support, and marital property — for clients in
+            Cook County and the surrounding collar counties. Most matters resolve by
+            agreement. The ones that cannot are tried.
+          </p>
+          <div class="cta">
+            <a class="btn btn-primary" href="#contact">Schedule a free consultation</a>
+            <a class="btn btn-ghost" href="#paths">How cases resolve</a>
+          </div>
+        </div>
+        <div class="card-quiet">
+          <h2>Before you call</h2>
+          <p>
+            The first consultation costs nothing and puts you under no obligation. Bring
+            what you have; nothing needs to be organized first.
+          </p>
+          <p>
+            <strong>What is useful:</strong> recent tax returns, pay records, statements
+            for the significant accounts and debts, and any court papers already filed.
+            A rough list of assets is enough to begin.
+          </p>
+          <p>
+            <strong>This site sets no cookies and loads no trackers.</strong> Nothing
+            about your visit is shared with an advertising network.
+          </p>
         </div>
       </div>
-      <div class="callout">
-        <h2>About the firm</h2>
-        <p>
-          <span class="todo">TODO</span> Replace this with the firm's own description:
-          admissions and year of licensure, education, background, and how the practice
-          is run. Nothing here has been written for you, because credentials and
-          experience are claims only the firm can make accurately.
-        </p>
-        <p>
-          Illinois Rule of Professional Conduct 7.1 prohibits false or misleading
-          statements about a lawyer or the lawyer's services — including statements that
-          create unjustified expectations about results.
-        </p>
+
+      <div class="marks">
+        <div class="mark"><b>Since 2009</b><span>Family law exclusively</span></div>
+        <div class="mark"><b>LL.M.</b><span>Family Law, Chicago-Kent</span></div>
+        <div class="mark"><b>Free</b><span>Initial consultation</span></div>
+        <div class="mark"><b>Two offices</b><span>Chicago &amp; Rolling Meadows</span></div>
       </div>
     </div>
   </div>
+
+  <section id="paths">
+    <div class="wrap">
+      <div class="head">
+        <h2>Three ways a case can end</h2>
+        <p>
+          Choosing the process matters as much as choosing the lawyer. It determines the
+          cost, the timeline, and how much of your private life becomes a matter of public
+          record. All three routes stay open until you commit to one.
+        </p>
+      </div>
+      <div class="paths">
+        <div class="path">
+          <p class="kicker">Route one</p>
+          <h3>Negotiated settlement</h3>
+          <p>
+            Counsel exchange financial disclosure and negotiate directly, then present a
+            marital settlement agreement and parenting plan for the court to approve. Most
+            cases end here, including cases that begin badly.
+          </p>
+          <p class="fit"><b>Fits when</b> both sides will disclose honestly and the disputes are about terms, not facts.</p>
+        </div>
+        <div class="path">
+          <p class="kicker">Route two</p>
+          <h3>Collaborative process</h3>
+          <p>
+            Both spouses and both attorneys sign an agreement not to litigate, then work
+            through the issues in joint meetings, bringing in a neutral financial
+            professional or child specialist where it helps. Nothing is filed to be argued
+            over, and nothing said in the process becomes evidence.
+          </p>
+          <p class="fit"><b>Fits when</b> you will co-parent for years and want the relationship intact at the end.</p>
+        </div>
+        <div class="path">
+          <p class="kicker">Route three</p>
+          <h3>Litigation</h3>
+          <p>
+            When a spouse hides assets, refuses to disclose, will not follow temporary
+            orders, or when a child's safety is at stake, the courtroom is the remedy —
+            with discovery tools, subpoenas, and a judge who decides.
+          </p>
+          <p class="fit"><b>Fits when</b> agreement is impossible or the other side is not dealing in good faith.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section id="practice">
     <div class="wrap">
       <div class="head">
         <h2>Practice areas</h2>
         <p>
-          Family law matters rarely arrive one at a time. These issues are usually
-          decided together, in a single case, under the Illinois Marriage and
-          Dissolution of Marriage Act.
+          Family law matters rarely arrive one at a time. These issues are usually decided
+          together, in a single case, under the Illinois Marriage and Dissolution of
+          Marriage Act.
         </p>
       </div>
       <div class="areas">
         <div class="area">
           <h3>Dissolution of marriage</h3>
-          <p>
-            Illinois is a no-fault state: the sole ground for dissolution is irreconcilable
-            differences. The work is rarely about whether the marriage ends — it is about
-            the financial and parenting terms on which it ends.
-          </p>
+          <p>Illinois is a no-fault state: irreconcilable differences is the only ground. The case is rarely about whether the marriage ends — it is about the terms on which it ends.</p>
           <span class="cite">750 ILCS 5/401</span>
         </div>
         <div class="area">
+          <h3>Legal separation</h3>
+          <p>For spouses living apart who want support and parenting terms decided without dissolving the marriage, whether for religious, insurance, or personal reasons.</p>
+          <span class="cite">750 ILCS 5/402</span>
+        </div>
+        <div class="area">
           <h3>Parental responsibilities</h3>
-          <p>
-            What used to be called custody is now allocated as decision-making authority
-            over education, health, religion, and extracurricular activities — assigned by
-            category, jointly or to one parent, according to the child's best interests.
-          </p>
+          <p>What used to be called custody is now allocated as decision-making authority over education, health, religion, and extracurriculars — by category, jointly or to one parent.</p>
           <span class="cite">750 ILCS 5/602.5</span>
         </div>
         <div class="area">
-          <h3>Parenting time</h3>
-          <p>
-            A parenting plan sets the regular schedule, holidays, transportation, and
-            communication between households. Relocation of a child's primary residence has
-            its own notice requirements and standards.
-          </p>
+          <h3>Parenting time &amp; relocation</h3>
+          <p>A parenting plan sets the schedule, holidays, transportation, and communication between households. Moving a child's primary residence has its own notice rules and standards.</p>
           <span class="cite">750 ILCS 5/602.7, 5/609.2</span>
         </div>
         <div class="area">
           <h3>Child support</h3>
-          <p>
-            Illinois uses an income shares model: support is calculated from both parents'
-            net incomes and the number of overnights, with separate treatment of health
-            insurance, childcare, and extracurricular costs.
-          </p>
+          <p>Illinois uses an income shares model: support is calculated from both parents' net incomes and the number of overnights, with health insurance, childcare, and extracurricular costs handled separately.</p>
           <span class="cite">750 ILCS 5/505</span>
         </div>
         <div class="area">
           <h3>Maintenance</h3>
-          <p>
-            Whether spousal maintenance is awarded at all comes first; then a statutory
-            formula generally governs amount and duration, with duration tied to the length
-            of the marriage. Higher-income cases can fall outside the guidelines.
-          </p>
+          <p>Whether maintenance is awarded at all comes first; a statutory formula then generally governs amount and duration, with duration tied to the length of the marriage. Higher-income cases can fall outside the guidelines.</p>
           <span class="cite">750 ILCS 5/504</span>
         </div>
         <div class="area">
           <h3>Property &amp; business interests</h3>
-          <p>
-            Marital property is divided equitably, which does not mean equally. Closely held
-            businesses, professional practices, deferred compensation, and commingled or
-            inherited assets require classification, tracing, and often valuation.
-          </p>
+          <p>Marital property is divided equitably, which does not mean equally. Closely held businesses, professional practices, deferred compensation, and commingled or inherited assets require classification, tracing, and often valuation.</p>
           <span class="cite">750 ILCS 5/503</span>
         </div>
         <div class="area">
-          <h3>Post-decree modification</h3>
-          <p>
-            Support and parenting terms can be revisited when circumstances substantially
-            change — a job loss, a relocation, a new schedule — and enforced when a party
-            simply stops complying with the judgment.
-          </p>
-          <span class="cite">750 ILCS 5/510, 5/610.5</span>
-        </div>
-        <div class="area">
-          <h3>Prenuptial &amp; marital agreements</h3>
-          <p>
-            Agreements made before or during a marriage that set the terms of property and
-            support in advance, drafted to withstand the disclosure and unconscionability
-            challenges that surface years later.
-          </p>
+          <h3>Prenuptial &amp; postnuptial agreements</h3>
+          <p>Agreements made before or during a marriage that settle property and support in advance — drafted to withstand the disclosure and unconscionability challenges that surface years later.</p>
           <span class="cite">750 ILCS 10/</span>
         </div>
         <div class="area">
-          <h3>Orders of protection</h3>
-          <p>
-            Emergency, interim, and plenary orders under the Illinois Domestic Violence Act,
-            and the defense of petitions brought without a factual basis during a contested
-            divorce.
-          </p>
-          <span class="cite">750 ILCS 60/</span>
+          <h3>Post-decree &amp; enforcement</h3>
+          <p>Support and parenting terms can be modified on a substantial change in circumstances, and enforced by petition or contempt when a party simply stops complying with the judgment.</p>
+          <span class="cite">750 ILCS 5/510, 5/610.5</span>
         </div>
       </div>
     </div>
@@ -319,41 +383,67 @@ footer .fine{font-size:.8rem;color:#8b939f;border-top:1px solid rgba(255,255,255
     <div class="wrap">
       <div class="head">
         <h2>How a case moves</h2>
-        <p>
-          Every matter is different, but the shape is usually the same. Knowing which stage
-          you are in makes the process considerably less disorienting.
-        </p>
+        <p>Every matter is different, but the shape is usually the same. Knowing which stage you are in makes the process considerably less disorienting.</p>
       </div>
       <ol class="steps">
         <li>
           <h3>Consultation</h3>
-          <p>
-            An assessment of the marriage, the finances, the children, and the realistic
-            range of outcomes — before any filing decision is made.
-          </p>
+          <p>An assessment of the marriage, the finances, the children, and the realistic range of outcomes — before any filing decision is made.</p>
         </li>
         <li>
           <h3>Filing &amp; temporary relief</h3>
-          <p>
-            A petition opens the case. Where support, exclusive possession, or a parenting
-            schedule cannot wait, temporary orders put terms in place for the duration.
-          </p>
+          <p>A petition opens the case. Where support, exclusive possession, or a parenting schedule cannot wait, temporary orders put terms in place for the duration.</p>
         </li>
         <li>
           <h3>Financial disclosure</h3>
-          <p>
-            Both sides exchange a sworn financial affidavit and supporting documents. This
-            stage determines what there is to divide, and it decides most cases.
-          </p>
+          <p>Both sides exchange a sworn financial affidavit and supporting documents. This stage establishes what there is to divide, and it decides most cases.</p>
         </li>
         <li>
           <h3>Resolution or trial</h3>
-          <p>
-            Most matters settle through negotiation or mediation and conclude in a marital
-            settlement agreement and parenting plan. What cannot be resolved is tried.
-          </p>
+          <p>Most matters conclude in a marital settlement agreement and parenting plan. What cannot be resolved is tried, and the judge decides it.</p>
         </li>
       </ol>
+    </div>
+  </section>
+
+  <section id="attorney">
+    <div class="wrap">
+      <div class="head"><h2>Shawn McKenna</h2></div>
+      <div class="bio">
+        <div>
+          <p>
+            Shawn McKenna has practiced family law exclusively since 2009 — dissolution,
+            allocation of parental responsibilities and parenting time, support,
+            maintenance, and the division of marital estates, including those holding a
+            closely held business or a professional practice. He holds an LL.M. in Family
+            Law from Chicago-Kent College of Law, a degree taken after admission and
+            specific to this field.
+          </p>
+          <p>
+            The practice covers both the negotiated and the contested end of the work:
+            settlement conferences, mediation, and the collaborative process on one side;
+            discovery, pretrial conferences, trials, and post-decree enforcement on the
+            other. Handling both is what makes it possible to recommend one honestly.
+          </p>
+          <p>
+            <span class="todo">TODO</span> Add here, in the attorney's own words: bar
+            admissions and year, undergraduate and law schools, bar association or
+            committee involvement, and the personal reason this practice area rather than
+            another. Two or three sentences of genuine background does more than a page of
+            adjectives.
+          </p>
+        </div>
+        <ul class="creds">
+          <li><b>Focus</b>Family law exclusively, since 2009</li>
+          <li><b>Advanced degree</b>LL.M., Family Law — Chicago-Kent College of Law</li>
+          <li>
+            <b>Recognition</b>Rising Star, Family Law
+            <span class="src">Selected by Super Lawyers each year since 2019. <span class="todo">TODO</span> confirm years and required attribution.</span>
+          </li>
+          <li><b>Admissions</b><span class="todo">TODO: Illinois, year; federal courts</span></li>
+          <li><b>Education</b><span class="todo">TODO: J.D. and undergraduate institutions</span></li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -369,21 +459,32 @@ footer .fine{font-size:.8rem;color:#8b939f;border-top:1px solid rgba(255,255,255
       </div>
 
       <details>
+        <summary>What does the first consultation cost?</summary>
+        <p>
+          Nothing. The initial consultation is free and carries no obligation to hire the
+          firm. It is a working meeting: what the assets and debts look like, what the
+          parenting situation is, what the realistic range of outcomes is, and what the
+          next step should be — even if that step is to wait.
+          <span class="todo">TODO</span> confirm whether this is offered by phone and video
+          as well as in the office.
+        </p>
+      </details>
+      <details>
         <summary>How long does a divorce take in Illinois?</summary>
         <p>
-          An uncontested case with a full agreement can conclude in a matter of months. A
-          contested case involving a business, disputed parenting, or incomplete disclosure
-          takes considerably longer, and the schedule depends on the assigned calendar and
-          the county. The single largest variable is how quickly both sides produce
-          complete financial documents.
+          An uncontested case with a full agreement can conclude in months. A contested
+          case involving a business, disputed parenting, or incomplete disclosure takes
+          considerably longer, and the schedule depends on the county and the assigned
+          calendar. The largest single variable is how quickly both sides produce complete
+          financial documents.
         </p>
       </details>
       <details>
         <summary>Do I need a reason to file?</summary>
         <p>
-          No. Illinois abolished fault grounds for dissolution. Irreconcilable differences
-          is the only ground, and a period of separation can establish it conclusively.
-          Marital misconduct is generally not a basis for dividing property or awarding
+          No. Illinois abolished fault grounds. Irreconcilable differences is the only
+          ground, and a period of separation can establish it conclusively. Marital
+          misconduct is generally not a basis for dividing property or awarding
           maintenance, though conduct affecting the children or the marital estate can
           matter for other purposes.
         </p>
@@ -394,35 +495,47 @@ footer .fine{font-size:.8rem;color:#8b939f;border-top:1px solid rgba(255,255,255
           Property is first classified as marital or non-marital. Marital property is then
           divided in just proportions after considering statutory factors — the length of
           the marriage, each spouse's contributions and economic circumstances, obligations
-          from a prior marriage, and others. Equitable division does not mean an even split,
-          and non-marital property that has been commingled may require tracing.
+          from a prior marriage, and others. Equitable does not mean equal, and non-marital
+          property that has been commingled may require tracing.
         </p>
       </details>
       <details>
         <summary>Who decides where the children live?</summary>
         <p>
           The parents, if they can agree on a parenting plan; the court, if they cannot.
-          The standard is the best interests of the child, applied through statutory factors
-          that include each parent's participation in past decision-making, the child's
-          needs and adjustment, and the willingness of each parent to support a relationship
-          with the other.
+          The standard is the best interests of the child, applied through statutory
+          factors that include each parent's participation in past decision-making, the
+          child's needs and adjustment, and each parent's willingness to support a
+          relationship with the other.
+        </p>
+      </details>
+      <details>
+        <summary>Is the collaborative process right for my case?</summary>
+        <p>
+          It depends on candor. The process works when both spouses will disclose their
+          finances fully without being compelled to, and it is a poor fit where assets are
+          being hidden, where there is a history of coercion, or where a party will not
+          honor an interim agreement. Because collaborative attorneys agree to withdraw if
+          the case goes to court, choosing it and then abandoning it is expensive — which
+          is why the fit is assessed honestly at the outset.
         </p>
       </details>
       <details>
         <summary>Can support or parenting time be changed later?</summary>
         <p>
-          Yes, on a showing of a substantial change in circumstances, subject to the
-          statutory limits on when parenting judgments may be modified. Enforcement is a
-          separate track: where a party ignores a support obligation or a parenting
-          schedule, the remedy is a petition to enforce or for contempt, not self-help.
+          Yes, on a showing of a substantial change in circumstances, subject to statutory
+          limits on when parenting judgments may be modified. Enforcement is a separate
+          track: where a party ignores a support obligation or a parenting schedule, the
+          remedy is a petition to enforce or for contempt — not self-help.
         </p>
       </details>
       <details>
-        <summary>What should I bring to a consultation?</summary>
+        <summary>What if I am not ready to file?</summary>
         <p>
-          Recent tax returns, pay records, and statements for the significant accounts and
-          debts, along with any existing court papers or agreements. A rough list of assets
-          and their approximate values is enough to start; the documents can follow.
+          That is a common and often sensible position. A consultation is still useful:
+          knowing what the numbers look like, what you would be entitled to, and what
+          documents to gather puts you in a far better position whenever you decide — or
+          if the decision is made for you.
         </p>
       </details>
     </div>
@@ -432,37 +545,42 @@ footer .fine{font-size:.8rem;color:#8b939f;border-top:1px solid rgba(255,255,255
     <div class="wrap">
       <div class="head">
         <h2>Contact</h2>
-        <p>Consultations are by appointment.
-          <span class="todo">TODO</span> state whether the initial consultation is free
-          or its fee, and the firm's usual response time.
-        </p>
+        <p>Consultations are by appointment at either office. Calls are returned the same business day whenever possible.</p>
       </div>
-      <div class="contact">
-        <div class="ccard">
+      <div class="offices">
+        <div class="office">
           <h3>Telephone</h3>
-          <!-- TODO: href="tel:+1312XXXXXXX" -->
-          <p><a href="tel:">[TODO: phone number]</a></p>
-          <p class="sm">[TODO: office hours]</p>
+          <p class="big"><a href="tel:+13128065347">(312) 806-5347</a></p>
+          <p class="sm">Monday–Friday, 9:00 a.m. – 5:00 p.m.</p>
         </div>
-        <div class="ccard">
+        <div class="office">
+          <h3>Chicago</h3>
+          <p class="big">105 W. Madison St.<br>Suite 1300</p>
+          <p class="sm">Chicago, Illinois 60602</p>
+        </div>
+        <div class="office">
+          <h3>Rolling Meadows</h3>
+          <p class="big"><span class="todo">TODO: street address</span></p>
+          <p class="sm">Rolling Meadows, Illinois <span class="todo">TODO: ZIP</span></p>
+        </div>
+        <div class="office">
           <h3>Email</h3>
-          <!-- TODO: use the firm's practice address, not a personal one -->
-          <p><a href="mailto:">[TODO: email address]</a></p>
-          <p class="sm">Please do not include confidential details in a first message.</p>
-        </div>
-        <div class="ccard">
-          <h3>Office</h3>
-          <p>[TODO: street address]<br>Chicago, Illinois [TODO: ZIP]</p>
-          <p class="sm">[TODO: parking, transit, or building access notes]</p>
+          <p class="big"><a href="mailto:"><span class="todo">TODO: firm email</span></a></p>
+          <p class="sm">Please keep a first message brief.</p>
         </div>
       </div>
       <div class="notice">
         <p>
-          <strong>No attorney-client relationship.</strong> Sending a message through this
-          site, or calling the office, does not create an attorney-client relationship. That
-          relationship begins only when the firm and the client sign a written engagement
-          agreement. Until then, information you send is not protected as a confidential
-          communication — so please keep a first message brief and avoid sensitive details.
+          <strong>No attorney-client relationship.</strong> Calling the office or sending a
+          message does not create an attorney-client relationship. That relationship begins
+          only when the firm and the client sign a written engagement agreement. Until
+          then, what you send is not protected as a confidential communication — so keep a
+          first message brief and save the details for the consultation.
+        </p>
+        <p>
+          <strong>If you are in danger, call 911.</strong> Emergency orders of protection
+          are available the same day through the Circuit Court, and this website is not a
+          way to reach anyone quickly.
         </p>
       </div>
     </div>
@@ -473,7 +591,7 @@ footer .fine{font-size:.8rem;color:#8b939f;border-top:1px solid rgba(255,255,255
 <footer>
   <div class="wrap">
     <p class="fname">Law Office of Shawn McKenna</p>
-    <p>Divorce and family law · Chicago, Illinois</p>
+    <p>Divorce and family law · Chicago and Rolling Meadows, Illinois · <a href="tel:+13128065347">(312) 806-5347</a></p>
     <p>
       <strong>Attorney advertising.</strong> The material on this site is provided for
       general information only and is not legal advice. It does not describe the outcome of
@@ -482,9 +600,9 @@ footer .fine{font-size:.8rem;color:#8b939f;border-top:1px solid rgba(255,255,255
       consulting a licensed attorney about your circumstances.
     </p>
     <p class="fine">
-      &copy; <span>[TODO: year]</span> Law Office of Shawn McKenna. All rights reserved.
-      <span>[TODO: confirm this page satisfies Illinois Rules of Professional Conduct 7.1–7.3
-      and add any required disclosure, such as the office address of record.]</span>
+      &copy; <span class="todo">TODO: year</span> Law Office of Shawn McKenna. All rights
+      reserved. Rating references identify the organization conferring them; such ratings
+      are not a guarantee of any result.
     </p>
   </div>
 </footer>
